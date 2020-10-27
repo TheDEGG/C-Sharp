@@ -5,15 +5,29 @@ public class Alumno
     public string PrimerNombre { get ; set; }
 
     public string SegundoNombre { get ; set; }
+
+    public bool Activo { get; set; }
+
+
     public Alumno(int id, string primerNombre, string segundoNombre)
     {
         Id = id;
         PrimerNombre = primerNombre;
         SegundoNombre = segundoNombre;
+        Activo = true;
     }
     public string nombreCompleto(){
-        return PrimerNombre + " " + SegundoNombre;
+        if (Activo == true){
+            return PrimerNombre + " " + SegundoNombre;    
+        }
         
+        return "Alumno Inactivo";
+    }
+    public void inactivarAlumno(){
+        Activo = false;
     }
 
+    public void activarAlumno(){
+        Activo = true;
+    }
 }
