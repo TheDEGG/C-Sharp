@@ -2,17 +2,21 @@ using System;
 
 public class Inventario
 {
-    string[,] productos = new string[5,3]
-    {
-       { "001", "iPhoneX", "0" },       
-       { "002", "Laptop Dell", "5" },
-       { "003", "Monitor Samsung", "2" },
-       { "004", "Mouse", "100" },
-       { "005", "Headset", "25" },
-     };
+    public List<Producto> ListadeProductos { get; set; }
     public Inventario()
     {
+        ListadeProductos = new List<Producto>();
+        Producto a = new Producto( "001", "iPhoneX",0);
+        Producto b = new Producto( "002", "Laptop Dell",5);
+        Producto c = new Producto( "003", "Monitor Samsung",2);
+        Producto d = new Producto( "004", "Mouse",100);
+        Producto e = new Producto( "005", "Headset",25);
 
+        ListadeProductos.Add(a);
+        ListadeProductos.Add(b);
+        ListadeProductos.Add(c);
+        ListadeProductos.Add(d);
+        ListadeProductos.Add(e);
     }
 
     
