@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class Inventario
 {
@@ -28,22 +29,23 @@ public class Inventario
         Console.WriteLine("********************");
         Console.WriteLine("Codigo, Descripcion y Existencia");
 
-        for (int i = 0; i < 5; i++)
+        foreach (var producto in ListadeProductos)
         {
-            Console.WriteLine(productos[i, 0] + " | " + productos[i, 1] + " | " + productos[i, 2]);
+            Console.WriteLine(producto.Codigo + " | " + producto.Descripcion + " | " + producto.Existencia.ToString());
         }
 
         Console.ReadLine();
     }
 
     private void movimientoInventario(string codigo, int cantidad, string tipoMovimiento) {
-        for (int i = 0; i < 5; i++)
+        
+        foreach (var producto in ListadeProductos)
         {
-            if (productos[i, 0] == codigo) {
+            if (producto.Codigo == codigo) {
                 if (tipoMovimiento == "+") {
-                    productos[i, 2] = (Int32.Parse(productos[i, 2]) + cantidad).ToString();
+                    producto.Existencia = (producto.Existencia + cantidad);
                 } else {
-                    productos[i, 2] = (Int32.Parse(productos[i, 2]) - cantidad).ToString();
+                    producto.Existencia = (producto.Existencia - cantidad);
                 }
             }
         }
