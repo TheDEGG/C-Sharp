@@ -40,15 +40,25 @@ public class DatosdePOS
 
             Cliente c2 = new Cliente(2, "Gloria Mejia       ", "93-88-34-21");
             ListadeClientes.Add(c2);
+
+            Cliente c3 = new Cliente(3, "Ramon Juarez       ", "88-89-08-78");
+            ListadeClientes.Add(c3);
+
+            Cliente c4 = new Cliente(4, "Krisna Dubon       ", "93-88-34-21");
+            ListadeClientes.Add(c4);
         }
 
     private void cargarVendedores()
     {
-        Vendedor v1 = new Vendedor(1, "Jose", "V001");
+        Vendedor v1 = new Vendedor(1, "Mario Baltazar ", "V00001");
         ListadeVendedores.Add(v1);
 
-        Vendedor v2 = new Vendedor(2, "Pablo", "V002");
+        Vendedor v2 = new Vendedor(2, "Vladimir Putin ", "V00002");
         ListadeVendedores.Add(v2);
+        Vendedor v3 = new Vendedor(3, "Mabel Paz      ", "V00003");
+        ListadeVendedores.Add(v3);
+        Vendedor v4 = new Vendedor(4, "Josue Pequeño   ", "V00004");
+        ListadeVendedores.Add(v4);
     }
 
     public void ListarInventaio()
