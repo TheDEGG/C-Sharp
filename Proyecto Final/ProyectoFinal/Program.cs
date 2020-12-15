@@ -14,7 +14,7 @@ namespace POS_proyecto_final
             {
                 Console.Clear();
                 Console.WriteLine("===============================================");
-                Console.WriteLine("|             Sistema de Ordenes              |");
+                Console.WriteLine("|             Sistema de VENTAS               |");
                 Console.WriteLine("===============================================");
                 Console.WriteLine("|                                             |");
                 Console.WriteLine("|               1 - Lista de Inventario       |");
